@@ -1,0 +1,462 @@
+PS C:\Windows\system32> Install-Module Msonline
+
+PS C:\Windows\system32> Connect-MsolService
+
+PS C:\Windows\system32> Get-MsolUser
+
+UserPrincipalName             DisplayName    isLicensed
+-----------------             -----------    ----------
+james@nkebe.onmicrosoft.com   James Nob      True      
+tom@nkebe.onmicrosoft.com     Tom Kern       True      
+nmk9004@nkebe.onmicrosoft.com Natnael Kebede True      
+timmy@nkebe.onmicrosoft.com   Timmy Bower    True      
+dave@nkebe.onmicrosoft.com    Dave Byrd      True      
+
+
+
+PS C:\Windows\system32> Get-MsolUser -UserPrincipalName james@nkebe.onmicrosoft.com
+
+UserPrincipalName           DisplayName isLicensed
+-----------------           ----------- ----------
+james@nkebe.onmicrosoft.com James Nob   True      
+
+
+
+PS C:\Windows\system32> Get-MsolUser -UserPrincipalName james@nkebe.onmicrosoft.com | fl
+
+
+ExtensionData                          : System.Runtime.Serialization.ExtensionDataObject
+AlternateEmailAddresses                : {}
+AlternateMobilePhones                  : {}
+AlternativeSecurityIds                 : {}
+BlockCredential                        : False
+City                                   : 
+CloudExchangeRecipientDisplayType      : 1073741824
+Country                                : 
+Department                             : 
+DirSyncProvisioningErrors              : {}
+DisplayName                            : James Nob
+Errors                                 : 
+Fax                                    : 
+FirstName                              : James
+ImmutableId                            : 
+IndirectLicenseErrors                  : {}
+IsBlackberryUser                       : False
+IsLicensed                             : True
+LastDirSyncTime                        : 
+LastName                               : Nob
+LastPasswordChangeTimestamp            : 6/25/2019 12:01:50 AM
+LicenseAssignmentDetails               : {Microsoft.Online.Administration.LicenseAssignmentDetail}
+LicenseReconciliationNeeded            : False
+Licenses                               : {nkebe:ENTERPRISEPREMIUM}
+LiveId                                 : 100320004E42A370
+MSExchRecipientTypeDetails             : 
+MSRtcSipDeploymentLocator              : 
+MSRtcSipPrimaryUserAddress             : 
+MobilePhone                            : 
+ObjectId                               : 0facabf5-5782-4aee-81ff-31f386adaaa8
+Office                                 : 
+OverallProvisioningStatus              : PendingInput
+PasswordNeverExpires                   : False
+PasswordResetNotRequiredDuringActivate : 
+PhoneNumber                            : 
+PortalSettings                         : 
+PostalCode                             : 
+PreferredDataLocation                  : 
+PreferredLanguage                      : 
+ProxyAddresses                         : {SMTP:james@nkebe.onmicrosoft.com}
+ReleaseTrack                           : 
+ServiceInformation                     : {}
+SignInName                             : james@nkebe.onmicrosoft.com
+SoftDeletionTimestamp                  : 
+State                                  : 
+StreetAddress                          : 
+StrongAuthenticationMethods            : {}
+StrongAuthenticationPhoneAppDetails    : {}
+StrongAuthenticationProofupTime        : 
+StrongAuthenticationRequirements       : {}
+StrongAuthenticationUserDetails        : 
+StrongPasswordRequired                 : True
+StsRefreshTokensValidFrom              : 6/25/2019 12:01:50 AM
+Title                                  : 
+UsageLocation                          : US
+UserLandingPageIdentifierForO365Shell  : 
+UserPrincipalName                      : james@nkebe.onmicrosoft.com
+UserThemeIdentifierForO365Shell        : 
+UserType                               : Member
+ValidationStatus                       : Healthy
+WhenCreated                            : 6/25/2019 12:01:50 AM
+
+
+
+
+PS C:\Windows\system32> Get-MsolUser -UserPrincipalName tom@nkebe.onmicrosoft.com | fl
+
+
+ExtensionData                          : System.Runtime.Serialization.ExtensionDataObject
+AlternateEmailAddresses                : {}
+AlternateMobilePhones                  : {}
+AlternativeSecurityIds                 : {}
+BlockCredential                        : False
+City                                   : 
+CloudExchangeRecipientDisplayType      : 1073741824
+Country                                : 
+Department                             : 
+DirSyncProvisioningErrors              : {}
+DisplayName                            : Tom Kern
+Errors                                 : 
+Fax                                    : 
+FirstName                              : Tom
+ImmutableId                            : 
+IndirectLicenseErrors                  : {}
+IsBlackberryUser                       : False
+IsLicensed                             : True
+LastDirSyncTime                        : 
+LastName                               : Kern
+LastPasswordChangeTimestamp            : 6/25/2019 12:01:51 AM
+LicenseAssignmentDetails               : {Microsoft.Online.Administration.LicenseAssignmentDetail}
+LicenseReconciliationNeeded            : False
+Licenses                               : {nkebe:ENTERPRISEPREMIUM}
+LiveId                                 : 100320004E3E52A7
+MSExchRecipientTypeDetails             : 
+MSRtcSipDeploymentLocator              : 
+MSRtcSipPrimaryUserAddress             : 
+MobilePhone                            : 
+ObjectId                               : 395d6d3c-557b-41f0-9fad-21d0b2490b53
+Office                                 : 
+OverallProvisioningStatus              : PendingInput
+PasswordNeverExpires                   : False
+PasswordResetNotRequiredDuringActivate : 
+PhoneNumber                            : 
+PortalSettings                         : 
+PostalCode                             : 
+PreferredDataLocation                  : 
+PreferredLanguage                      : 
+ProxyAddresses                         : {SMTP:tom@nkebe.onmicrosoft.com}
+ReleaseTrack                           : 
+ServiceInformation                     : {}
+SignInName                             : tom@nkebe.onmicrosoft.com
+SoftDeletionTimestamp                  : 
+State                                  : 
+StreetAddress                          : 
+StrongAuthenticationMethods            : {}
+StrongAuthenticationPhoneAppDetails    : {}
+StrongAuthenticationProofupTime        : 
+StrongAuthenticationRequirements       : {}
+StrongAuthenticationUserDetails        : 
+StrongPasswordRequired                 : True
+StsRefreshTokensValidFrom              : 6/25/2019 12:01:51 AM
+Title                                  : 
+UsageLocation                          : US
+UserLandingPageIdentifierForO365Shell  : 
+UserPrincipalName                      : tom@nkebe.onmicrosoft.com
+UserThemeIdentifierForO365Shell        : 
+UserType                               : Member
+ValidationStatus                       : Healthy
+WhenCreated                            : 6/25/2019 12:01:51 AM
+
+
+
+
+PS C:\Windows\system32> Get-MsolUser -UserPrincipalName Natnael@nkebe.onmicrosoft.com | fl
+Get-MsolUser : User Not Found.  User: Natnael@nkebe.onmicrosoft.com.
+At line:1 char:1
++ Get-MsolUser -UserPrincipalName Natnael@nkebe.onmicrosoft.com | fl
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Get-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.UserNotFoundException,Microsoft.Online.Administration.Automation.GetUser
+ 
+
+PS C:\Windows\system32> Get-MsolUser -UserPrincipalName nmk9004@nkebe.onmicrosoft.com | fl
+
+
+ExtensionData                          : System.Runtime.Serialization.ExtensionDataObject
+AlternateEmailAddresses                : {nkebe@outlook.com}
+AlternateMobilePhones                  : {}
+AlternativeSecurityIds                 : {}
+BlockCredential                        : False
+City                                   : 
+CloudExchangeRecipientDisplayType      : 
+Country                                : US
+Department                             : 
+DirSyncProvisioningErrors              : {}
+DisplayName                            : Natnael Kebede
+Errors                                 : 
+Fax                                    : 
+FirstName                              : Natnael
+ImmutableId                            : 
+IndirectLicenseErrors                  : {}
+IsBlackberryUser                       : False
+IsLicensed                             : True
+LastDirSyncTime                        : 
+LastName                               : Kebede
+LastPasswordChangeTimestamp            : 6/24/2019 11:45:57 PM
+LicenseAssignmentDetails               : {Microsoft.Online.Administration.LicenseAssignmentDetail}
+LicenseReconciliationNeeded            : False
+Licenses                               : {nkebe:ENTERPRISEPREMIUM}
+LiveId                                 : 100320004E4ACD58
+MSExchRecipientTypeDetails             : 
+MSRtcSipDeploymentLocator              : 
+MSRtcSipPrimaryUserAddress             : 
+MobilePhone                            : 
+ObjectId                               : 755ab7b6-d40e-436d-a994-8cdd4eb92621
+Office                                 : 
+OverallProvisioningStatus              : PendingInput
+PasswordNeverExpires                   : 
+PasswordResetNotRequiredDuringActivate : 
+PhoneNumber                            : 4696234298
+PortalSettings                         : 
+PostalCode                             : 
+PreferredDataLocation                  : 
+PreferredLanguage                      : en-US
+ProxyAddresses                         : {SMTP:nmk9004@nkebe.onmicrosoft.com}
+ReleaseTrack                           : 
+ServiceInformation                     : {}
+SignInName                             : nmk9004@nkebe.onmicrosoft.com
+SoftDeletionTimestamp                  : 
+State                                  : 
+StreetAddress                          : 
+StrongAuthenticationMethods            : {}
+StrongAuthenticationPhoneAppDetails    : {}
+StrongAuthenticationProofupTime        : 
+StrongAuthenticationRequirements       : {}
+StrongAuthenticationUserDetails        : 
+StrongPasswordRequired                 : 
+StsRefreshTokensValidFrom              : 6/24/2019 11:45:57 PM
+Title                                  : 
+UsageLocation                          : US
+UserLandingPageIdentifierForO365Shell  : 
+UserPrincipalName                      : nmk9004@nkebe.onmicrosoft.com
+UserThemeIdentifierForO365Shell        : 
+UserType                               : Member
+ValidationStatus                       : Healthy
+WhenCreated                            : 6/24/2019 11:45:57 PM
+
+
+
+
+PS C:\Windows\system32> Get-Msoluser -ObjectId 755ab7b6-d40e-436d-a994-8cdd4eb92621
+
+UserPrincipalName             DisplayName    isLicensed
+-----------------             -----------    ----------
+nmk9004@nkebe.onmicrosoft.com Natnael Kebede True      
+
+
+
+PS C:\Windows\system32> New-MsolUser -UserPrincipalName nate@nkebe.onmicrosoft.com
+New-MsolUser : You must provide a required property: Parameter name: DisplayName
+At line:1 char:1
++ New-MsolUser -UserPrincipalName nate@nkebe.onmicrosoft.com
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [New-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.RequiredPropertyNotSetException,Microsoft.Online.Administration.Automation.Ne 
+   wUser
+ 
+
+PS C:\Windows\system32> New-MsolUser -UserPrincipalName nate@nkebe.onmicrosoft.com -DisplayName "Nate Jones" -FirstName Nate -LastName Jones -UsageLocation "US" 
+
+Password UserPrincipalName          DisplayName isLicensed
+-------- -----------------          ----------- ----------
+Puw48423 nate@nkebe.onmicrosoft.com Nate Jones  False     
+
+
+
+PS C:\Windows\system32> Get-MsolUser
+
+UserPrincipalName             DisplayName    isLicensed
+-----------------             -----------    ----------
+james@nkebe.onmicrosoft.com   James Nob      True      
+nate@nkebe.onmicrosoft.com    Nate Jones     False     
+tom@nkebe.onmicrosoft.com     Tom Kern       True      
+nmk9004@nkebe.onmicrosoft.com Natnael Kebede True      
+timmy@nkebe.onmicrosoft.com   Timmy Bower    True      
+dave@nkebe.onmicrosoft.com    Dave Byrd      True      
+
+
+
+PS C:\Windows\system32> 
+PS C:\Windows\system32> 
+PS C:\Windows\system32> Get-MsolPasswordPolicy
+cmdlet Get-MsolPasswordPolicy at command pipeline position 1
+Supply values for the following parameters:
+DomainName: nkebe.onmicrosoft.com
+
+ExtensionData                                    NotificationDays ValidityPeriod
+-------------                                    ---------------- --------------
+System.Runtime.Serialization.ExtensionDataObject               30            730
+
+
+
+PS C:\Windows\system32> Get-MsolUser -UserPrincipalName nate@nkebe.onmicrosoft.com |fl *pass*
+
+
+LastPasswordChangeTimestamp            : 6/25/2019 1:10:57 AM
+PasswordNeverExpires                   : False
+PasswordResetNotRequiredDuringActivate : 
+StrongPasswordRequired                 : True
+
+
+
+
+PS C:\Windows\system32> Set-MsolUser -UserPrincipalName nkebe@nkebe.onmicrosoft.com -PasswordNeverExpires $true
+Set-MsolUser : User Not Found.  User: .
+At line:1 char:1
++ Set-MsolUser -UserPrincipalName nkebe@nkebe.onmicrosoft.com -Password ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Set-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.UserNotFoundException,Microsoft.Online.Administration.Automation.SetUser
+ 
+
+PS C:\Windows\system32> Set-MsolUser -UserPrincipalName nate@nkebe.onmicrosoft.com -PasswordNeverExpires $true
+
+PS C:\Windows\system32> Get-MsolUser -UserPrincipalName nate@nkebe.onmicrosoft.com |fl *pass*
+
+
+LastPasswordChangeTimestamp            : 6/25/2019 1:10:57 AM
+PasswordNeverExpires                   : True
+PasswordResetNotRequiredDuringActivate : 
+StrongPasswordRequired                 : True
+
+
+
+
+PS C:\Windows\system32> Get-MsolUser -UserPrincipalName nate@nkebe.onmicrosoft.com |fl
+
+
+ExtensionData                          : System.Runtime.Serialization.ExtensionDataObject
+AlternateEmailAddresses                : {}
+AlternateMobilePhones                  : {}
+AlternativeSecurityIds                 : {}
+BlockCredential                        : False
+City                                   : 
+CloudExchangeRecipientDisplayType      : 
+Country                                : 
+Department                             : 
+DirSyncProvisioningErrors              : {}
+DisplayName                            : Nate Jones
+Errors                                 : 
+Fax                                    : 
+FirstName                              : Nate
+ImmutableId                            : 
+IndirectLicenseErrors                  : {}
+IsBlackberryUser                       : False
+IsLicensed                             : False
+LastDirSyncTime                        : 
+LastName                               : Jones
+LastPasswordChangeTimestamp            : 6/25/2019 1:33:59 AM
+LicenseAssignmentDetails               : {}
+LicenseReconciliationNeeded            : False
+Licenses                               : {}
+LiveId                                 : 100320004E4190B6
+MSExchRecipientTypeDetails             : 
+MSRtcSipDeploymentLocator              : 
+MSRtcSipPrimaryUserAddress             : 
+MobilePhone                            : 
+ObjectId                               : 28940de5-bc7e-4f07-b76f-40c342415267
+Office                                 : 
+OverallProvisioningStatus              : None
+PasswordNeverExpires                   : True
+PasswordResetNotRequiredDuringActivate : 
+PhoneNumber                            : 
+PortalSettings                         : 
+PostalCode                             : 
+PreferredDataLocation                  : 
+PreferredLanguage                      : en-US
+ProxyAddresses                         : {}
+ReleaseTrack                           : 
+ServiceInformation                     : {}
+SignInName                             : nate@nkebe.onmicrosoft.com
+SoftDeletionTimestamp                  : 
+State                                  : 
+StreetAddress                          : 
+StrongAuthenticationMethods            : {Microsoft.Online.Administration.StrongAuthenticationMethod}
+StrongAuthenticationPhoneAppDetails    : {}
+StrongAuthenticationProofupTime        : 
+StrongAuthenticationRequirements       : {Microsoft.Online.Administration.StrongAuthenticationRequirement}
+StrongAuthenticationUserDetails        : Microsoft.Online.Administration.StrongAuthenticationUserDetails
+StrongPasswordRequired                 : True
+StsRefreshTokensValidFrom              : 6/25/2019 1:33:59 AM
+Title                                  : 
+UsageLocation                          : US
+UserLandingPageIdentifierForO365Shell  : 
+UserPrincipalName                      : nate@nkebe.onmicrosoft.com
+UserThemeIdentifierForO365Shell        : 
+UserType                               : Member
+ValidationStatus                       : Healthy
+WhenCreated                            : 6/25/2019 1:10:57 AM
+
+
+
+
+PS C:\Windows\system32> 
+PS C:\Windows\system32> 
+PS C:\Windows\system32> 
+PS C:\Windows\system32> Get-MsolUser -UserPrincipalName nate@nkebe.onmicrosoft.com |fl
+
+
+ExtensionData                          : System.Runtime.Serialization.ExtensionDataObject
+AlternateEmailAddresses                : {}
+AlternateMobilePhones                  : {}
+AlternativeSecurityIds                 : {}
+BlockCredential                        : False
+City                                   : 
+CloudExchangeRecipientDisplayType      : 
+Country                                : 
+Department                             : 
+DirSyncProvisioningErrors              : {}
+DisplayName                            : Nate Jones
+Errors                                 : 
+Fax                                    : 
+FirstName                              : Nate
+ImmutableId                            : 
+IndirectLicenseErrors                  : {}
+IsBlackberryUser                       : False
+IsLicensed                             : False
+LastDirSyncTime                        : 
+LastName                               : Jones
+LastPasswordChangeTimestamp            : 6/25/2019 1:33:59 AM
+LicenseAssignmentDetails               : {}
+LicenseReconciliationNeeded            : False
+Licenses                               : {}
+LiveId                                 : 100320004E4190B6
+MSExchRecipientTypeDetails             : 
+MSRtcSipDeploymentLocator              : 
+MSRtcSipPrimaryUserAddress             : 
+MobilePhone                            : 
+ObjectId                               : 28940de5-bc7e-4f07-b76f-40c342415267
+Office                                 : 
+OverallProvisioningStatus              : None
+PasswordNeverExpires                   : True
+PasswordResetNotRequiredDuringActivate : 
+PhoneNumber                            : 
+PortalSettings                         : 
+PostalCode                             : 
+PreferredDataLocation                  : 
+PreferredLanguage                      : en-US
+ProxyAddresses                         : {}
+ReleaseTrack                           : 
+ServiceInformation                     : {}
+SignInName                             : nate@nkebe.onmicrosoft.com
+SoftDeletionTimestamp                  : 
+State                                  : 
+StreetAddress                          : 
+StrongAuthenticationMethods            : {Microsoft.Online.Administration.StrongAuthenticationMethod}
+StrongAuthenticationPhoneAppDetails    : {}
+StrongAuthenticationProofupTime        : 
+StrongAuthenticationRequirements       : {Microsoft.Online.Administration.StrongAuthenticationRequirement}
+StrongAuthenticationUserDetails        : Microsoft.Online.Administration.StrongAuthenticationUserDetails
+StrongPasswordRequired                 : True
+StsRefreshTokensValidFrom              : 6/25/2019 1:33:59 AM
+Title                                  : 
+UsageLocation                          : US
+UserLandingPageIdentifierForO365Shell  : 
+UserPrincipalName                      : nate@nkebe.onmicrosoft.com
+UserThemeIdentifierForO365Shell        : 
+UserType                               : Member
+ValidationStatus                       : Healthy
+WhenCreated                            : 6/25/2019 1:10:57 AM
+
+
+
+
+PS C:\Windows\system32> 
